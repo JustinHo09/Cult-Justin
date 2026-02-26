@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class gamePlay : MonoBehaviour
 {
-    // public Slider cultHPSlider;
+     public Slider cultHPSlider;
 
-    // public Slider enemyHPSlider;
+     public Slider enemyHPSlider;
 
     public int currentHpCult;
 
@@ -19,8 +20,8 @@ public class gamePlay : MonoBehaviour
 
     public float startTime;
 
-     public TMP playerHp;
-     public TMP enemyHP;
+     public TMP_Text playerHp;
+     public TMP_Text enemyHP;
 
     public GameObject gameover;
 
@@ -44,13 +45,13 @@ public class gamePlay : MonoBehaviour
 playerHp.text = "HP: " + currentHpCult;
 enemyHP.text = "HP: " + currentHpEnemy;
         currentHpEnemy = enemyMaxHP;
-        // cultHPSlider.maxValue = cultMaxHp;
+         cultHPSlider.maxValue = cultMaxHp;
 
-        // cultHPSlider.value = cultMaxHp;
+         cultHPSlider.value = cultMaxHp;
 
-        // enemyHPSlider.maxValue = enemyMaxHP;
+         enemyHPSlider.maxValue = enemyMaxHP;
 
-        // enemyHPSlider.value = currentHpEnemy;
+         enemyHPSlider.value = currentHpEnemy;
     }
 
     // Update is called once per frame
@@ -58,7 +59,7 @@ enemyHP.text = "HP: " + currentHpEnemy;
     {
         if(Time.time-startTime >2){
             currentHpCult -= 5;
-            //cultHPSlider = currentHpCult;
+            cultHPSlider.value = currentHpCult;
             startTime = Time.time;
             playerHp.text = "HP: " + currentHpCult;
             if(currentHpCult <= 0){
@@ -70,7 +71,7 @@ enemyHP.text = "HP: " + currentHpEnemy;
 
         if(Keyboard.current.spaceKey.wasPressedThisFrame){
             currentHpEnemy -= 10;
-            //enemyHPSlider = currentHpEnemy;
+            enemyHPSlider.value = currentHpEnemy;
             enemyHP.text = "HP: " + currentHpEnemy;
             if(currentHpEnemy <=0){
                 victory.SetActive(true);

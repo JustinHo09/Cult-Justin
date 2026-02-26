@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LabTest
+comment0.text=\n\ LabTest\ -\ create\ a\ sample\ lab\ class.\n\n\ @author\ \ Esteban\ Parra\ Rodriguez\n\ @version\ 01-20-2024\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+numComments=2

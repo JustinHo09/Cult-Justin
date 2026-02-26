@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Heater
+comment0.text=\n\ A\ Modified\ implementation\ of\ the\ Heater\ class,\ \n\ described\ in\ exercises\ 2.92-93.\n\ \n\ @author\ William\ H.\ Hooper\n\ @version\ 01-24-2024\n
+comment1.params=
+comment1.target=Heater()
+comment2.params=b
+comment2.target=Heater(int)
+comment3.params=amount
+comment3.target=void\ raiseTemperature(double)
+comment4.params=amount
+comment4.target=void\ lowerTemperature(double)
+comment5.params=temp
+comment5.target=void\ setTemperature(double)
+comment6.params=
+comment6.target=double\ getTemperature()
+comment7.params=
+comment7.target=void\ print()
+numComments=8

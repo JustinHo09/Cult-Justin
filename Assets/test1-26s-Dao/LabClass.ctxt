@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=LabClass
+comment0.text=\n\ The\ LabClass\ class\ represents\ an\ enrolment\ list\ for\ one\ lab\ class.\ It\ stores\n\ the\ time,\ room\ and\ participants\ of\ the\ lab,\ as\ well\ as\ the\ instructor's\ name.\n\ \n\ @author\ Michael\ K\u00F6lling\ and\ David\ Barnes\n\ @version\ 2016.02.29\n
+comment1.params=teacher\ maxNumberOfStudents\ cred
+comment1.target=LabClass(java.lang.String,\ int,\ int)
+comment1.text=\n\ Create\ a\ LabClass\ with\ a\ maximum\ number\ of\ enrolments.\ All\ other\ details\n\ are\ set\ to\ default\ values.\n
+comment2.params=newStudent
+comment2.target=void\ enrollStudent(Student)
+comment2.text=\n\ Add\ a\ student\ to\ this\ LabClass.\n
+comment3.params=dropping
+comment3.target=void\ dropStudent(Student)
+comment3.text=\n\ Add\ a\ student\ to\ this\ LabClass.\n
+comment4.params=
+comment4.target=int\ numberOfStudents()
+comment4.text=\n\ Return\ the\ number\ of\ students\ currently\ enrolled\ in\ this\ LabClass.\n
+comment5.params=maybe
+comment5.target=boolean\ isEnrolled(Student)
+comment6.params=name
+comment6.target=Student\ findName(java.lang.String)
+comment7.params=id
+comment7.target=Student\ findID(java.lang.String)
+comment8.params=num
+comment8.target=void\ setCapacity(int)
+comment9.params=
+comment9.target=void\ printList()
+comment9.text=\n\ Print\ out\ a\ class\ list\ with\ other\ LabClass\ details\ to\ the\ standard\n\ terminal.\n
+numComments=10

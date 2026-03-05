@@ -52,7 +52,7 @@ public class GamePlay : MonoBehaviour
             startTime = Time.time;
             if(currentHpCult <= 0){
                 gameover.SetActive(true);
-                //cultDie.Play();
+                cultDie.Play();
                 this.enabled = false;
             }
         }
@@ -62,7 +62,7 @@ public class GamePlay : MonoBehaviour
             enemyHPSlider.value = currentHpEnemy;
             if(currentHpEnemy <=0){
                 victory.SetActive(true);
-                //enemyDie.Play();
+                enemyDie.Play();
                 this.enabled = false;
             }
         }

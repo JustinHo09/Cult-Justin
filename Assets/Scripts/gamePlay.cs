@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using UnityEngine.UI;
 
 
-public class gamePlay : MonoBehaviour
+public class GamePlay : MonoBehaviour
 {
      public Slider cultHPSlider;
 
@@ -20,9 +19,6 @@ public class gamePlay : MonoBehaviour
 
     public float startTime;
 
-     public TMP_Text playerHp;
-     public TMP_Text enemyHP;
-
     public GameObject gameover;
 
     public GameObject victory;
@@ -31,37 +27,29 @@ public class gamePlay : MonoBehaviour
 
     public AudioSource cultDie;
 
-    public GameObject audioSoucy;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //enemyDie = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>()[1];
-        //cultDie = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>()[2];
         startTime = 0.0f;
         currentHpCult = cultMaxHp;
         currentHpEnemy = enemyMaxHP;
+        
+        cultHPSlider.maxValue = cultMaxHp;
 
-playerHp.text = "HP: " + currentHpCult;
-enemyHP.text = "HP: " + currentHpEnemy;
-        currentHpEnemy = enemyMaxHP;
-         cultHPSlider.maxValue = cultMaxHp;
+        cultHPSlider.value = cultMaxHp;
 
-         cultHPSlider.value = cultMaxHp;
+        enemyHPSlider.maxValue = enemyMaxHP;
 
-         enemyHPSlider.maxValue = enemyMaxHP;
-
-         enemyHPSlider.value = currentHpEnemy;
+        enemyHPSlider.value = currentHpEnemy;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Time.time-startTime >2){
-            currentHpCult -= 5;
+            currentHpCult -= 10;
             cultHPSlider.value = currentHpCult;
             startTime = Time.time;
-            playerHp.text = "HP: " + currentHpCult;
             if(currentHpCult <= 0){
                 gameover.SetActive(true);
                 //cultDie.Play();
@@ -72,7 +60,6 @@ enemyHP.text = "HP: " + currentHpEnemy;
         if(Keyboard.current.spaceKey.wasPressedThisFrame){
             currentHpEnemy -= 10;
             enemyHPSlider.value = currentHpEnemy;
-            enemyHP.text = "HP: " + currentHpEnemy;
             if(currentHpEnemy <=0){
                 victory.SetActive(true);
                 //enemyDie.Play();
